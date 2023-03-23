@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Статті </title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/static/assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		
+			<section id="header">
+				<header>
+					<span class="image avatar"><img src="/static/images/avatar.jpg" alt="" /></span>
+					<h1 id="logo"><a href="#">Руслан Омельченко</a></h1>
+					<p>Я всього лише виклав статті<br />
+					а ви їх читаєте</p>
+				</header>
+				<nav id="nav">
+					<ul>
+						<li><a href="#one" class="active">Початок</a></li>
+						
+						<li><a href="#two">Статті</a></li>
+						
+					</ul>
+				</nav>
+				<footer>
+					<ul class="icons">
+						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+				</footer>
+			</section>
+
+		
+			<div id="wrapper">
+
+				
+					<div id="main">
+
+						
+						<section id="one"> 	
+							<div class="image main" data-position="center">
+								<img src="/static/images/banner.jpg" alt="" />
+							</div>
+							<div class="container">
+								<header class="major">
+									<h2>Збірник статей</h2>
+									<p>Ви можете відправити свої статі, для показу на цьому сайті</p>
+								</header>
+							</div>
+						</section>	
+
+						<section id="two"> 
+							{%  for article in articles %}
+								<div class="container">
+									<h3>{{article.title}}</h3>
+									<div class="features">
+										
+										<article>
+											<a href="#" class="image"><img src="/static/images/pic01.jpg" alt="" /></a>
+											<div class="inner">
+												<p>{{article.description}}</p>
+												<a href="/articles/{{article.id}}">Читати статтю</a>
+											</div>
+										</article>
+										
+									</div>
+								</div>
+							{% endfor %}
+						</section>	
+								
+	
+					</div>
+
+		
+					<section id="footer">
+						<div class="container">
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved.</li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="/static/assets/js/jquery.min.js"></script>
+			<script src="/static/assets/js/jquery.scrollex.min.js"></script>
+			<script src="/static/assets/js/jquery.scrolly.min.js"></script>
+			<script src="/static/assets/js/browser.min.js"></script>
+			<script src="/static/assets/js/breakpoints.min.js"></script>
+			<script src="/static/assets/js/util.js"></script>
+			<script src="/static/assets/js/main.js"></script>
+
+	</body>
+</html>
